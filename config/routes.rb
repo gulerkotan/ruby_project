@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :faydalars
-  get 'panel', to: "admin#index"
   namespace :on_taraf do
-
+    get 'paylasimdetay/index'
+    get 'anasayfa/index'
   end
   
-  
+  resources :paylasims
   devise_for :users
-  #root "on_taraf/ana_sayfa#index" #ana sayfa
+  get 'panel', to: "admin#index"
+  root "on_taraf/anasayfa#index" #ana sayfa
 end

@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </head>
 
   <body>
@@ -15,5 +15,8 @@
     <%= render partial: "layouts/shared/on_taraf/header"%>
     <%= yield %>
     <%= render partial: "layouts/shared/on_taraf/footer"%>
+    
+    <script src="/assets/front/hero-slider-main.js"></script>
+    <script src="/assets/front/jquery.magnific-popup.min.js"></script>
   </body>
 </html>

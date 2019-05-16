@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+    <%= render partial: "layouts/shared/arka_taraf/navbar" %>
+    </br></br></br></br><br></br>
+<% end %>
+
+
+
+<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.9s">
+						<h3><%= @paylasim.baslik%></h3>
+						<p><%= @paylasim.icerik%></p>
+						</br><hr>
+						<h5>Oluşturulma Tarihi : <%= @paylasim.created_at%></h5>
+						<h5>Güncellenme Tarihi : <%= @paylasim.updated_at%></h5>
+					</div>
+					<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.9s">
+						<center>
+						    <%= image_tag @paylasim.resim.url(:medium) if @paylasim.resim? %>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>

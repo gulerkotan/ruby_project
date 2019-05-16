@@ -1,0 +1,22 @@
+<%= render partial: "layouts/shared/arka_taraf/navbar" %>
+
+<hr style="margin-top:100px;">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Baslik:</strong>
+  <%= @paylasim.baslik %>
+</p>
+
+<p>
+  <strong>Icerik:</strong>
+  <%= @paylasim.icerik %>
+</p>
+
+<p>
+    <%= image_tag @paylasim.resim.url(:medium) if @paylasim.resim? %>
+</p>
+
+<%= link_to 'Edit', edit_paylasim_path(@paylasim) %> |
+<%= link_to 'Back', paylasims_path %>
